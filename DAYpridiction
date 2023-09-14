@@ -2,45 +2,141 @@
 <html>
 <head>
     <title>Day of the Week</title>
+    <style>
+        body {
+            background-color: #FF9933; /* Saffron */
+            color: #138808; /* Green */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #weekday {
+            font-size: 36px;
+            margin: 20px;
+        }
+
+        #phrase {
+            font-size: 24px;
+        }
+
+        #greeting {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="greeting">Good day!</div>
+        <div id="weekday"></div>
+        <div id="phrase"></div>
+    </div>
+    <script>
+        let date = new Date();
+        let dayOfWeekNumber = date.getDay();
+        let nameOfDay;
+        let x; // Declare the variable x
+
+        switch (dayOfWeekNumber) {
+            case 0:
+                nameOfDay = 'Sunday';
+                x = 'Time to chillax!';
+                break;
+            case 1:
+                nameOfDay = 'Monday';
+                x = 'Monday morning blues!';
+                break;
+            case 2:
+                nameOfDay = 'Tuesday';
+                x = 'Taco Time!';
+                break;
+            case 3:
+                nameOfDay = 'Wednesday';
+                x = 'Two more days to the weekend.';
+                break;
+            case 4:
+                nameOfDay = 'Thursday';
+                x = 'The weekend is almost here...';
+                break;
+            case 5:
+                nameOfDay = 'Friday';
+                x = 'Weekend is here!';
+                break;
+            case 6:
+                nameOfDay = 'Saturday';
+                x = 'Time to party!';
+                break;
+        }
+
+        // Display the day of the week
+        let weekdayDiv = document.getElementById('weekday');
+        weekdayDiv.innerHTML = `${nameOfDay}`;
+
+        // Display x
+        let xDiv = document.getElementById('phrase');
+        xDiv.innerHTML = `${x}`;
+    </script>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+    <title>Day of the Week</title>
 </head>
 <body>
     <div id="weekday"></div>
     <div id="phrase"></div>
     <script>
         // Your JavaScript code here
-let date = new Date();
-let dayOfWeekNumber = date.getDay();
+let date=new Date();
+let dayOfWeekNumber=date.getDay();
 let nameOfDay;
 let x; // Declare the variable x
 
-switch (dayOfWeekNumber) {
+switch(dayOfWeekNumber){
     case 0:
-        nameOfDay = 'Sunday';
-        x = 'Time to chillax!';
+        nameOfDay='Sunday';
+        x='Time to chillax!';
         break;
     case 1:
-        nameOfDay = 'Monday';
-        x = 'Monday morning blues!';
+        nameOfDay='Monday';
+        x='Monday morning blues!';
         break;
     case 2:
-        nameOfDay = 'Tuesday';
-        x = 'Taco Time!';
+        nameOfDay='Tuesday';
+        x='Taco Time!';
         break;
     case 3:
-        nameOfDay = 'Wednesday';
-        x = 'Two more days to the weekend.';
+        nameOfDay='Wednesday';
+        x='Two more days to the weekend.';
         break;
     case 4:
-        nameOfDay = 'Thursday';
-        x = 'The weekend is almost here...';
+        nameOfDay='Thursday';
+        x='The weekend is almost here...';
         break;
     case 5:
-        nameOfDay = 'Friday';
-        x = 'Weekend is here!';
+        nameOfDay='Friday';
+        x='Weekend is here!';
         break;
     case 6:
-        nameOfDay = 'Saturday';
-        x = 'Time to party!';
+        nameOfDay='Saturday';
+        x='Time to party!';
         break;
 }
 
@@ -54,3 +150,4 @@ xDiv.innerHTML = `${x}`;
     </script>
 </body>
 </html>
+-->
